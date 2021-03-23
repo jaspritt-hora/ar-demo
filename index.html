@@ -18,17 +18,15 @@
       Using the default hiro marker (Get it below)
       https://github.com/akashkuttappa/armodels/raw/master/markers/hiro.jpg
     -->
-
-    <!-- <a-marker-camera preset='hiro'><a-entity gltf-model="#tree" position="0 0 0"  scale="10 10 10"></a-entity></a-marker-camera>
-<a-entity camera look-controls orbit-controls="target: 0 1.6 -0.5; minDistance: 0.5; maxDistance: 180; initialPosition: 0 5 15"></a-entity> -->
     <a-marker preset='hiro'>
       <a-entity
       id="drone"
       position="0 0 0"
       scale="1 1 1"
-      gltf-model-next= "url(busterDrone.gltf);">
+      gltf-model-next="src: url(busterDrone.gltf);"
+      animation-mixer>
       </a-entity>
-    </a-marke>
+    </a-marker>
     
     <a-entity camera></a-entity>
   </a-scene>
