@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <!-- we import arjs version without NFT but with marker + location based support -->
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <body style="margin : 0px; overflow: hidden;">
-      <a-scene embedded arj='trackingMethod: best;'>  
-        <a-marker preset="hiro">
-            <a-entity
-            light="type: point; intensity: 5.1;"
-            gltf-model= "https://arjs-cors-proxy.herokuapp.com/https://cdn.glitch.com/241a0a07-f121-4c16-9e06-165e8dfdcd72%2Fscene.gltf?v=1616571044566"
-            position="-1 0 0"
-            scale="0.01 0.01 0.01"
-            ></a-entity>
-        </a-marker>
-        <a-entity camera></a-entity>
-      </a-scene>
-    </body>
-</html>
+<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs='trackingMethod: best;'>
+      <a-gltf-model src="https://cdn.glitch.com/241a0a07-f121-4c16-9e06-165e8dfdcd72%2Fscene.gltf?v=1616571044566"></a-gltf-model>
+      <a-marker-camera preset='hiro'></a-marker-camera>
+      <a-camera-static/>
+    </a-scene>
+</body>
