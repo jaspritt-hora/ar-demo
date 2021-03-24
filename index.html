@@ -4,14 +4,14 @@
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <body style="margin : 0px; overflow: hidden;">
-        <a-scene embedded arjs>
-        <a-marker preset="hiro">
+        <a-scene embedded arj='trackingMethod: best;'>
+        <a-marker-camera preset="hiro">
             <a-entity
             position="1 1 1"
             scale="0.5 0.5 0.5"
             gltf-model ="https://cdn.glitch.com/241a0a07-f121-4c16-9e06-165e8dfdcd72%2Fscene.gltf?v=1616571044566"
             ></a-entity>
-        </a-marker>
+        </a-marker-camera>
         <a-entity camera></a-entity>
         </a-scene>
     </body>
