@@ -11,21 +11,14 @@
 </head>
 <body>
     <style>
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .container div{
-            height: 300px;
-            width: 300px;
+        model-viewer#reveal {
+            --poster-color: transparent;
         }
     </style>
       <!-- use unique asset to ensure lazy loading -->
   <!-- Use it like any other HTML element -->
-        <model-viewer style="height: 50%; width: 50%" loading="lazy" ar ar-modes="webxr scene-viewer quick-look"   animation-name="Running" ar shadow-intensity="1" ar-scale="auto" src="https://cdn.glitch.com/241a0a07-f121-4c16-9e06-165e8dfdcd72%2Fscene.gltf?v=1616571044566" alt="A 3D model of an astronaut" auto-rotate camera-controls>
-            <button slot="ar-button" style="background-color: black; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
+        <model-viewer id="reveal" poster="../../models/assets/red_tshirt.png"  loading="eager" ar ar-modes="webxr scene-viewer quick-look" ar-scale="auto" src="https://cdn.glitch.com/241a0a07-f121-4c16-9e06-165e8dfdcd72%2Fscene.gltf?v=1616571044566" alt="A 3D model of an astronaut" auto-rotate camera-controls>
+            <button slot="ar-button" style="background-color: lightgrey; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
                     👋 Activate AR
                 </button>
         </model-viewer>
